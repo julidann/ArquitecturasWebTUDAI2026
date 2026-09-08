@@ -185,7 +185,7 @@ public class ProductoDAO implements DAO<Producto> {
 
         try (PreparedStatement ps = conn.prepareStatement(query); ResultSet rs = ps.executeQuery()) {
             if (rs.next()) {
-                productoMayorRecaudacionDTO = new ProductoMayorRecaudacionDTO(rs.getInt(1), rs.getString(2), rs.getFloat(3), rs.getInt(4));
+                productoMayorRecaudacionDTO = new ProductoMayorRecaudacionDTO(rs.getInt(1), rs.getString(2), rs.getFloat(4), rs.getFloat(3));
             }
             conn.close();
         } catch (SQLException e) {
